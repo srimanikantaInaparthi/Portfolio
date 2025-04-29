@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Srimanikanta Inaparthi, a Full Stack Developer specializing in building innovative and scalable web applications.">
+  <meta property="og:title" content="Srimanikanta Inaparthi | Portfolio">
+  <meta property="og:image" content="C:\Users\SRIMANIKANTA\OneDrive\Desktop\programs\html\New Website\image.jpg"> <!-- Replace with actual image URL -->
+  <meta property="og:description" content="Portfolio of Srimanikanta Inaparthi, showcasing skills and projects.">
+  <title>Srimanikanta Inaparthi | Portfolio</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #cbcce7; color: #333; }
+    header { display: flex; justify-content: space-between; align-items: center; background-color: #f4f4f4; padding: 10px 30px; }
+    header nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+    header .social-icons a { margin-left: 15px; color: #5c5c8a; text-decoration: none; font-size: 18px; }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+      color: white;
+      gap: 60px;
+    }
+    .hero img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      flex-shrink: 0;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0 0 15px 0;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+    .hero h3 {
+      font-size: 24px;
+      margin: 0 0 25px 0;
+      font-weight: 600;
+      color: #a0aaff;
+    }
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 12px 0;
+      color: #d0d0ff;
+    }
+    .hero .cta-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background-color: #ff6b6b;
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .hero .cta-btn:hover {
+      background-color: #ff4b4b;
+    }
+    .skills { padding: 50px 20px; background-color: #eef0f8; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    .skills h2 { font-size: 28px; margin-bottom: 20px; }
+    .skills ul { list-style: none; padding: 0; font-size: 18px; }
+    .skills ul li { margin: 10px 0; }
+    .resume-btn { margin-top: 30px; }
+    .resume-btn a { background-color: #0a043c; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-size: 18px; }
+    .resume-btn a:hover { background-color: #1a055c; }
+
+    /* Contact Section Styles */
+    .contact { padding: 40px 20px; background-color: #d6d8e7; text-align: center; max-width: 600px; margin: 40px auto 60px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .contact h2 { font-size: 26px; margin-bottom: 20px; color: #0a043c; }
+    .contact-form { display: grid; gap: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #999; font-size: 16px; }
+    .contact-form textarea { resize: vertical; height: 140px; }
+    .contact-form button { background-color: #0a043c; color: white; padding: 14px 28px; border: none; border-radius: 6px; font-size: 18px; cursor: pointer; transition: background-color 0.3s ease; }
+    .contact-form button:hover { background-color: #1a055c; }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        min-height: auto;
+      }
+      .hero img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero h3 {
+        font-size: 20px;
+      }
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="social-icons">
+    <strong>Contact:</strong>
+    <a href="mailto:Srimanikantainaparthi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/srimanikanta-inaparthi-887778251/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/srimanikantaInaparthi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.hackerrank.com/profile/manikanta611" target="_blank" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <img src="C:\Users\SRIMANIKANTA\OneDrive\Desktop\programs\html\New Website\image.jpg" alt="Srimanikanta Photo">
+  <div class="hero-content">
+    <h1>Srimanikanta Inaparthi</h1>
+    <h3>Full Stack Developer</h3>
+    <p>Building Innovative and Scalable Web Applications</p>
+    <p>I am a Computer Science graduate with a strong foundation in software engineering.</p>
+    <p>My goal is to create impactful software solutions that solve real-world problems.</p>
+    <p>I strive for continuous growth as a full stack developer and effective team contributor.</p>
+    <a href="#projects" class="cta-btn">View My Work</a>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming Languages:</strong> Java, Python, C</li>
+    <li><strong>Front-End Technologies:</strong> HTML, CSS, JavaScript</li>
+    <li><strong>Database Management:</strong> MySQL, AWS</li>
+    <li><strong>Frameworks/Tools:</strong> REST API, Git, GitHub, Postman</li>
+    <li><strong>Software Tools:</strong>Visual Studio Code, MS Office, Excel</li>
+    <li><strong>Development Practices:</strong>Agile, Test-Driven Development (TDD)</li>
+  </ul>
+  <div class="resume-btn">
+    <a href="Srimanikanta.pdf" download>Download Resume</a>
+  </div>
+</section>
+
+<section id="projects" class="projects-section" style="background-color: #eef0f8; padding: 50px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 900px; margin: 40px auto;">
+  <h2 style="font-size: 32px; color: #0a043c; margin-bottom: 30px; text-align: center;">Projects</h2>
+  <div class="project" style="background-color: white; padding: 25px 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+    <h3 style="font-size: 24px; color: #1a055c; margin-bottom: 15px;">Live Project: SALES INFINITY – AI-Powered CRM Platform</h3>
+    <p style="font-size: 18px; color: #333; line-height: 1.6;">Worked on SALES INFINITY, a live CRM and sales automation project designed for industries like Real Estate, Healthcare, Insurance, and more. The platform automates lead capture, follow-ups, and communication across SMS, WhatsApp, and email. Contributed to modules such as Lead Management, Smart Communication, Marketing Automation, and Call Centre Integration. Gained hands-on experience with CRM workflows, client engagement tools, and sales process optimization.</p>
+    <p style="font-size: 18px; color: #0a043c; font-weight: 600;">Website: <a href="https://www.edze.in/" target="_blank" rel="noopener noreferrer" style="color: #1a055c; text-decoration: underline;">check the Project here</a></p>
+  </div>
+  <!-- Add more projects here -->
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form class="contact-form" action="YOUR_BACKEND_URL" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Srimanikanta Inaparthi. All rights reserved.</p>
+</footer>
+
+<style>
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+  color: #555;
+  font-size: 14px;
+  margin-top: 40px;
+}
+</style>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = form.elements['name'].value.trim();
+      const email = form.elements['email'].value.trim();
+      const message = form.elements['message'].value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      Email.send({
+        SecureToken: "YOUR_SECURE_TOKEN_HERE", // Replace with your actual secure token from smtpjs.com
+        To: 'srimanikantainaparthi@gmail.com', // Replace with your email address to receive messages
+        From: email,
+        Subject: `New Contact Form Message from ${name}`,
+        Body: `Name: ${name}<br/>Email: ${email}<br/>Message: ${message}`
+      }).then(function (message) {
+        alert("Message sent successfully!");
+        form.reset();
+      }).catch(function (error) {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+    });
+  });
+</script>
+</body>
+</html>
